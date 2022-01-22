@@ -20,14 +20,16 @@ from cloths_segmentation.dataloaders import SegmentationDataset
 from cloths_segmentation.metrics import binary_mean_iou
 from cloths_segmentation.utils import get_samples
 
-image_path = Path(r"output/images")
-mask_path = Path(r"output/labels")
+image_path = Path(r"/kaggle/input/segmentation-unet-imags/images")
+mask_path = Path(r"/kaggle/input/segmentation-unet-labels/labels")
 
 
 def get_args():
     parser = argparse.ArgumentParser()
     arg = parser.add_argument
     arg("-c", "--config_path", type=Path, help="Path to the config.", required=True)
+    arg("-i", "--image_path", type=Path, help="Path to the config.", required=True)
+    arg("-m", "--mask_path", type=Path, help="Path to the config.", required=True.)
     return parser.parse_args()
 
 
