@@ -29,7 +29,9 @@ def get_args():
     arg = parser.add_argument
     arg("-c", "--config_path", type=Path, help="Path to the config.", required=True)
     arg("-i", "--image_path", type=Path, help="Path to the config.", required=True)
-    arg("-m", "--mask_path", type=Path, help="Path to the config.", required=True.)
+    arg("-m", "--mask_path", type=Path, help="Path to the config.", required=True)
+    image_path=args["image_path"]
+    mask_path=args["mask_path"]
     return parser.parse_args()
 
 
