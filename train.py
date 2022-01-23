@@ -250,7 +250,6 @@ def main():
 
     trainer = object_from_dict(
         hparams["trainer"],
-        logger=WandbLogger(hparams["experiment_name"]),
         checkpoint_callback=object_from_dict(hparams["checkpoint_callback"]),
     )
     torch.distributed.init_process_group(backend='gloo',init_method="env://",world_size=1,rank=0)
