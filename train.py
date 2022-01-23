@@ -30,8 +30,8 @@ def get_args():
     arg("-c", "--config_path", type=Path, help="Path to the config.", required=True)
     arg("-i", "--image_path", type=Path, help="Path to the config.", required=True)
     arg("-m", "--mask_path", type=Path, help="Path to the config.", required=True)
-    image_path=args["image_path"]
-    mask_path=args["mask_path"]
+    image_path=arg["image_path"]
+    mask_path=arg["mask_path"]
     return parser.parse_args()
 
 
