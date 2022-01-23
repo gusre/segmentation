@@ -239,8 +239,8 @@ class SegmentPeople(pl.LightningModule):
 
 def main():
     args = get_args()
-    image_path=args["image_path"]
-    mask_path=args["mask_path"]
+    image_path=args.image_path
+    mask_path=args.mask_path
     with open(args.config_path) as f:
         hparams = yaml.load(f, Loader=yaml.SafeLoader)
 
