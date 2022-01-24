@@ -17,7 +17,7 @@ trainer:
   gpus: 1
   max_epochs: 2
   #strategy: ddp
-  progress_bar_refresh_rate: 1
+  progress_bar_refresh_rate: 100
   benchmark: True
   precision: 16
   gradient_clip_val: 5.0
@@ -32,7 +32,7 @@ scheduler:
   T_mult: 2
 
 train_parameters:
-  batch_size: 1
+  batch_size: 4
 
 checkpoint_callback:
   type: pytorch_lightning.callbacks.ModelCheckpoint
@@ -40,7 +40,7 @@ checkpoint_callback:
   monitor: val_iou
   verbose: True
   mode: max
-  save_top_k: 1
+  save_top_k: -1
 
 val_parameters:
   batch_size: 1
