@@ -23,7 +23,7 @@ trainer:
   gradient_clip_val: 5.0
   num_sanity_val_steps: 2
   sync_batchnorm: True
-#  resume_from_checkpoint: 2020-10-30/epoch=67.ckpt
+  resume_from_checkpoint: /kaggle/input/checkpoint/epoch0.ckpt
 
 
 scheduler:
